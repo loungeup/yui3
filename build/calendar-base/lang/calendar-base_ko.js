@@ -1,0 +1,1 @@
+YUI.add("lang/calendar-base_ko",function(e){e.Intl.add("calendar-base","ko",{very_short_weekdays:["\uc77c","\uc6d4","\ud654","\uc218","\ubaa9","\uae08","\ud1a0"],first_weekday:0,weekends:[0,6]})},"@VERSION@");

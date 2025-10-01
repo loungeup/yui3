@@ -9728,18 +9728,31 @@ Y.mix(YUI.Env[Y.version].modules, {
     },
     "calendar-base": {
         "lang": [
+            "ca",
+            "cs",
             "de",
+            "el",
             "en",
             "es",
             "es-AR",
+            "eu",
             "fr",
+            "gl",
             "hu",
+            "id",
             "it",
             "ja",
+            "ko",
+            "mg",
             "nb-NO",
             "nl",
+            "pl",
             "pt-BR",
+            "ro",
             "ru",
+            "sl",
+            "tr",
+            "vi",
             "zh-Hans",
             "zh-Hans-CN",
             "zh-Hant",
@@ -10247,6 +10260,7 @@ Y.mix(YUI.Env[Y.version].modules, {
             "ar-JO",
             "ca",
             "ca-ES",
+            "cs",
             "da",
             "da-DK",
             "de",
@@ -10266,6 +10280,7 @@ Y.mix(YUI.Env[Y.version].modules, {
             "en-PH",
             "en-SG",
             "en-US",
+            "eu",
             "es",
             "es-AR",
             "es-BO",
@@ -10285,6 +10300,7 @@ Y.mix(YUI.Env[Y.version].modules, {
             "fr-BE",
             "fr-CA",
             "fr-FR",
+            "gl",
             "hi",
             "hi-IN",
             "hu",
@@ -10296,6 +10312,7 @@ Y.mix(YUI.Env[Y.version].modules, {
             "ja-JP",
             "ko",
             "ko-KR",
+            "mg",
             "ms",
             "ms-MY",
             "nb",
@@ -10311,6 +10328,7 @@ Y.mix(YUI.Env[Y.version].modules, {
             "ro-RO",
             "ru",
             "ru-RU",
+            "sl",
             "sv",
             "sv-SE",
             "th",
@@ -12210,7 +12228,7 @@ Y.mix(YUI.Env[Y.version].modules, {
         ]
     }
 });
-YUI.Env[Y.version].md5 = '45357bb11eddf7fd0a89c0b756599df2';
+YUI.Env[Y.version].md5 = '3204a92b5d1b1e70b7a33b7cf1a7e4ca';
 
 
 }, '@VERSION@', {"requires": ["loader-base"]});

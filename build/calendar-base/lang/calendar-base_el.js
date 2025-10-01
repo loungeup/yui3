@@ -1,0 +1,1 @@
+YUI.add("lang/calendar-base_el",function(e){e.Intl.add("calendar-base","el",{very_short_weekdays:["\u039a\u03c5","\u0394\u03b5","\u03a4\u03c1","\u03a4\u03b5","\u03a0\u03b5","\u03a0\u03b1","\u03a3\u03b1"],first_weekday:1,weekends:[0,6]})},"@VERSION@");

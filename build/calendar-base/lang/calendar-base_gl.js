@@ -1,0 +1,1 @@
+YUI.add("lang/calendar-base_gl",function(e){e.Intl.add("calendar-base","gl",{very_short_weekdays:["Dom.","Lun.","Mar.","M\u00e9r.","Xov.","Ven.","S\u00e1b."],first_weekday:1,weekends:[0,6]})},"@VERSION@");

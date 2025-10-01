@@ -1,0 +1,1 @@
+YUI.add("lang/calendar-base_sl",function(e){e.Intl.add("calendar-base","sl",{very_short_weekdays:["Ned.","Pon.","Tor.","Sre.","\u010cet.","Pet.","Sob."],first_weekday:1,weekends:[0,6]})},"@VERSION@");
