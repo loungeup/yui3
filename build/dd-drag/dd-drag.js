@@ -782,7 +782,7 @@ YUI.add('dd-drag', function (Y, NAME) {
                 if (Drag.START_EVENT.indexOf('gesture') !== 0) {
                     //Only do these if it's not a gesture
                     if (this.get('haltDown')) {
-                        ev.halt();
+                        ev.stopPropagation();
                     } else {
                         ev.preventDefault();
                     }

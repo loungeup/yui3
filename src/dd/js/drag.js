@@ -782,7 +782,7 @@
                     //Only do these if it's not a gesture
                     if (this.get('haltDown')) {
                         Y.log('Halting MouseDown', 'info', 'drag');
-                        ev.halt();
+                        ev.stopPropagation();
                     } else {
                         Y.log('Preventing Default on MouseDown', 'info', 'drag');
                         ev.preventDefault();

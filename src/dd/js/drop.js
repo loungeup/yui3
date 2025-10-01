@@ -318,18 +318,20 @@
             if (!this.shim) {
                 return false;
             }
-            this.get(NODE).removeClass(DDM.CSS_PREFIX + '-drop-active-valid');
-            this.get(NODE).removeClass(DDM.CSS_PREFIX + '-drop-active-invalid');
-            this.get(NODE).removeClass(DDM.CSS_PREFIX + '-drop-over');
+            if (this.get(NODE)._node != null) {
+                this.get(NODE).removeClass(DDM.CSS_PREFIX + '-drop-active-valid');
+                this.get(NODE).removeClass(DDM.CSS_PREFIX + '-drop-active-invalid');
+                this.get(NODE).removeClass(DDM.CSS_PREFIX + '-drop-over');
 
-            if (this.get('useShim')) {
-                this.shim.setStyles({
-                    top: '-999px',
-                    left: '-999px',
-                    zIndex: '1'
-                });
+                if (this.get('useShim')) {
+                    this.shim.setStyles({
+                        top: '-999px',
+                        left: '-999px',
+                        zIndex: '1'
+                    });
+                }
+                this.overTarget = false;
             }
-            this.overTarget = false;
         },
         /**
         * Activates the shim and adds some interaction CSS classes
@@ -347,21 +349,23 @@
                 return false;
             }
             var node = this.get(NODE);
-            //TODO Visibility Check..
-            //if (this.inGroup(DDM.activeDrag.get('groups')) && this.get(NODE).isVisible()) {
-            if (this.inGroup(DDM.activeDrag.get('groups'))) {
-                node.removeClass(DDM.CSS_PREFIX + '-drop-active-invalid');
-                node.addClass(DDM.CSS_PREFIX + '-drop-active-valid');
-                DDM._addValid(this);
-                this.overTarget = false;
-                if (!this.get('useShim')) {
-                    this.shim = this.get(NODE);
+            if (node._node != null) {
+                //TODO Visibility Check..
+                //if (this.inGroup(DDM.activeDrag.get('groups')) && this.get(NODE).isVisible()) {
+                if (this.inGroup(DDM.activeDrag.get('groups'))) {
+                    node.removeClass(DDM.CSS_PREFIX + '-drop-active-invalid');
+                    node.addClass(DDM.CSS_PREFIX + '-drop-active-valid');
+                    DDM._addValid(this);
+                    this.overTarget = false;
+                    if (!this.get('useShim')) {
+                        this.shim = this.get(NODE);
+                    }
+                    this.sizeShim();
+                } else {
+                    DDM._removeValid(this);
+                    node.removeClass(DDM.CSS_PREFIX + '-drop-active-valid');
+                    node.addClass(DDM.CSS_PREFIX + '-drop-active-invalid');
                 }
-                this.sizeShim();
-            } else {
-                DDM._removeValid(this);
-                node.removeClass(DDM.CSS_PREFIX + '-drop-active-valid');
-                node.addClass(DDM.CSS_PREFIX + '-drop-active-invalid');
             }
         },
         /**
